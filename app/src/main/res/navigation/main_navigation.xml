@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/rootFragment">
+
+    <fragment
+        android:id="@+id/rootFragment"
+        android:name="com.example.livehoneyedu.fragment.RootFragment"
+        android:label="fragment_root"
+        tools:layout="@layout/fragment_root" >
+        <action
+            android:id="@+id/action_rootFragment_to_signedOutFragment"
+            app:destination="@id/signedOutFragment" />
+        <action
+            android:id="@+id/action_rootFragment_to_signedInFragment"
+            app:destination="@id/signedInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signedInFragment"
+        android:name="com.example.livehoneyedu.fragment.SignedInFragment"
+        android:label="fragment_signed_in"
+        tools:layout="@layout/fragment_signed_in" >
+        <action
+            android:id="@+id/action_signedInFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_signedInFragment_to_anotherFullscreenFragment"
+            app:destination="@id/anotherFullscreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signedOutFragment"
+        android:name="com.example.livehoneyedu.fragment.SignedOutFragment"
+        android:label="fragment_signed_out"
+        tools:layout="@layout/fragment_signed_out" >
+        <action
+            android:id="@+id/action_signedOutFragment_to_onBoardingStepFragment"
+            app:destination="@id/onBoardingStepFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardingStepFragment"
+        android:name="com.example.livehoneyedu.fragment.OnBoardingStepFragment"
+        android:label="fragment_on_boarding_step"
+        tools:layout="@layout/fragment_on_boarding_step" >
+        <action
+            android:id="@+id/action_onBoardingStepFragment_to_singInFragment"
+            app:destination="@id/singInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/singInFragment"
+        android:name="com.example.livehoneyedu.fragment.SingInFragment"
+        android:label="fragment_sing_in"
+        tools:layout="@layout/fragment_sing_in" >
+        <action
+            android:id="@+id/action_singInFragment_to_singUpFragment"
+            app:destination="@id/singUpFragment" />
+        <action
+            android:id="@+id/action_singInFragment_to_verifyCodeFragment"
+            app:destination="@id/verifyCodeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/singUpFragment"
+        android:name="com.example.livehoneyedu.fragment.SingUpFragment"
+        android:label="fragment_sing_up"
+        tools:layout="@layout/fragment_sing_up" >
+        <action
+            android:id="@+id/action_singUpFragment_to_verifyCodeFragment"
+            app:destination="@id/verifyCodeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/verifyCodeFragment"
+        android:name="com.example.livehoneyedu.fragment.VerifyCodeFragment"
+        android:label="fragment_verify_code"
+        tools:layout="@layout/fragment_verify_code" />
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.livehoneyedu.fragment.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_testsFragment"
+            app:destination="@id/testsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_statisticsFragment"
+            app:destination="@id/statisticsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/anotherFullscreenFragment"
+        android:name="com.example.livehoneyedu.fragment.AnotherFullscreenFragment"
+        android:label="fragment_another_fullscreen"
+        tools:layout="@layout/fragment_another_fullscreen" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.livehoneyedu.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/testsFragment"
+        android:name="com.example.livehoneyedu.fragment.TestsFragment"
+        android:label="fragment_tests"
+        tools:layout="@layout/fragment_tests" />
+    <fragment
+        android:id="@+id/statisticsFragment"
+        android:name="com.example.livehoneyedu.fragment.StatisticsFragment"
+        android:label="fragment_statistics"
+        tools:layout="@layout/fragment_statistics" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.livehoneyedu.fragment.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>
